@@ -9,9 +9,13 @@
 
 # Build
 
-``docker build -t nginx-alpine .``
+Run ``docker build -t nginx-alpine .``
 
-# Use as Service on Debian
+# First time Run
+
+Run ``./run.sh`` (you can use ``docker start``/``docker stop``/etc to control this container later)
+
+# Use as Service on Debian (optional)
 
 * Copy ``docker-nginx-daemon.service`` config file to ``/etc/systemd/system``
 * Run ``sudo systemctl daemon-reload && sudo systemctl enable docker-nginx-daemon.service``
